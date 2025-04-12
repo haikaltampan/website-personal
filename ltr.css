@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --rf-brand:#C68EFD;
+  --rf-brand-rgb:248,54,145;
+  --rf-dark:#FADF;
+  --rf-body:#FADF;
+  --f-main:"Raleway",sans-serif;
+  --transition:all.6s cubic-bezier(.165,.84,44,1);
+  --shadow:0px,15px,30px,rgba(0,0,0,0.1);
+}
+body {
+  font-family: var(--f-main);
+  color: var(--rf-body);
+  line-height: 3;
+}
+h1,.h1 h2,.h2 h3,.h3 h4,.h4 h5,.h5 h6,.h6 {
+  font-weight: 700;
+  color: var(--rf-dark);
+  font-family: var(--f-main);
+}
+
+.text-brand {
+  color: var(--rf-brand);
+}
+.navbar {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #E9A5F1;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #8F87F1;
+  background-image: url();
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
